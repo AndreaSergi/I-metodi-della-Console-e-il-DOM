@@ -1,0 +1,41 @@
+<!-- Crea uno script che al click del bottone inserisca la modalità dark -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .darkMode {
+        background-color: rgb(53, 53, 53);
+        color: rgb(192, 192, 192);
+      }
+    </style>
+
+  </head>
+  <body>
+    <button class="btn">Dark mode</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo amet iusto expedita sed perferendis! Quam voluptatem omnis dicta, maxime facilis neque! Aspernatur inventore atque laboriosam. Dolorem culpa minus quaerat? Alias tenetur placeat autem quam officia, ad eius nemo facere beatae iure quasi minus corrupti labore deleniti eaque quod esse reiciendis vero animi doloremque! Laboriosam, unde iure! Quidem architecto ipsa animi consequuntur officiis iusto nam vero, dignissimos, ipsam tempora explicabo unde? Error voluptatem quia magnam perferendis, ex hic esse assumenda eveniet, qui fugit officia ipsa! Accusantium at vel vero, aperiam nisi reiciendis ipsam asperiores itaque est illo, natus qui iusto obcaecati corrupti debitis incidunt blanditiis dignissimos. Accusantium tempora, aspernatur voluptates, cupiditate esse, asperiores excepturi quaerat officiis nobis magni quibusdam ab eaque.</p>
+
+    <script>
+
+        const btn = document.querySelector('button');
+        const body = document.body
+
+        btn.addEventListener('click', event => {
+            const body = document.querySelector('body');
+            body.classList.toggle('darkMode');
+            
+            if(body.classList.contains('darkMode')) {
+                btn.textContent = 'White Mode'
+            } else {
+                btn.textContent = 'Dark Mode'
+            }
+
+            
+        });
+
+    </script>
+  </body>
+</html>
