@@ -1,0 +1,1 @@
+Questa repository tratterà il modulo "I metodi della Console e il DOM" trattato al corso DEVELHOPE
