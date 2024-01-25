@@ -15,13 +15,16 @@
 
   </head>
   <body>
-    <button class="btn">Dark mode</button>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo amet iusto expedita sed perferendis! Quam voluptatem omnis dicta, maxime facilis neque! Aspernatur inventore atque laboriosam. Dolorem culpa minus quaerat? Alias tenetur placeat autem quam officia, ad eius nemo facere beatae iure quasi minus corrupti labore deleniti eaque quod esse reiciendis vero animi doloremque! Laboriosam, unde iure! Quidem architecto ipsa animi consequuntur officiis iusto nam vero, dignissimos, ipsam tempora explicabo unde? Error voluptatem quia magnam perferendis, ex hic esse assumenda eveniet, qui fugit officia ipsa! Accusantium at vel vero, aperiam nisi reiciendis ipsam asperiores itaque est illo, natus qui iusto obcaecati corrupti debitis incidunt blanditiis dignissimos. Accusantium tempora, aspernatur voluptates, cupiditate esse, asperiores excepturi quaerat officiis nobis magni quibusdam ab eaque.</p>
+    <h1>Dark Mode</h1>
+    <div>
+      <button class="btn">Dark Mode</button>
+    </div>
 
     <script>
 
         const btn = document.querySelector('button');
         const body = document.body
+        const h1 = document.querySelector('h1')
 
         btn.addEventListener('click', event => {
             const body = document.querySelector('body');
@@ -29,8 +32,11 @@
             
             if(body.classList.contains('darkMode')) {
                 btn.textContent = 'White Mode'
+                h1.textContent = 'Dark Mode'
+
             } else {
                 btn.textContent = 'Dark Mode'
+                h1.textContent = 'White Mode'
             }
 
             
