@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <div id="cardInfo">
+        <img id="image" alt="Immagine del personaggio">
+    </div>
+
+    <script>
+
+        const apiUrl = 'https://ringsdb.com/api/public/cards/';
+
+        // Funzione per ottenere una carta casuale
+        async function getCard() {
+            try {
+                //richiesta GET all'API
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Estrai i dati della carta
+                const card = data[Math.floor(Math.random() * data.length)];
+
+                // Aggiorna la pagina con i dati della carta
+                updateCardInfo(card);
+                
+            } catch (error) {
+                console.error('Errore durante la richiesta API:', error);
+            }
+            
+        }
+
+
+        //funzione per aggiornare i dati della carta: nome e immagine
+        function updateCardInfo(card) {
+            const name = document.getElementById('name');
+            const image = document.getElementById('image');
+
+            name.textContent = card.name;
+            image.setAttribute('src', "https://ringsdb.com" + card.imagesrc)
+        }
+        
+        getCard()
+    </script>
+</body>
+</html>
